@@ -15,3 +15,7 @@
 <link rel="stylesheet" href="<?= asset('assets/css/tweaks.css') ?>">
 <link rel="stylesheet" id="authCss" href="<?= asset('assets/css/auth.css') ?>">
 <link rel="stylesheet" href="<?= asset('assets/css/motion.css') ?>">
+<?php if (ANALYTICS): ?>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<?php endif; ?>

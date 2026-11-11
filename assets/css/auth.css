@@ -106,3 +106,46 @@
 .au-hint,.au-caps{font-size:11px}
 .au-tab{top:-13px;font-size:10px;padding:4px 10px}
 @media (max-width:560px){.au-show h2{font-size:28px}.au-slides img{width:84px;height:84px}.au-2col{grid-template-columns:1fr}.au-body{padding:26px 20px 22px}}
+/* Burger-chases-fries mini animation beside the brand name */
+.ck{position:relative;display:block;flex:none;width:150px;height:38px;overflow:hidden;margin-left:4px;pointer-events:none;-webkit-mask:linear-gradient(90deg,transparent 0,#000 12%,#000 86%,transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 12%,#000 86%,transparent 100%)}
+.ck-c{position:absolute;bottom:0;left:0;will-change:transform;animation:ck-run 3.6s linear infinite}
+.ck-b{animation-delay:.6s}
+.ck-s{display:block;height:36px;width:auto;overflow:visible;animation:ck-hop .36s ease-in-out infinite}
+.ck-b .ck-s{animation-duration:.4s;animation-delay:.12s}
+.ck-lg,.ck-ar{animation:ck-swing .36s ease-in-out infinite alternate}
+.ck-lg.b,.ck-ar.a{animation-direction:alternate-reverse}
+.ck-b .ck-lg,.ck-b .ck-ar{animation-duration:.4s}
+@keyframes ck-run{from{transform:translateX(-44px)}to{transform:translateX(152px)}}
+@keyframes ck-hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes ck-swing{from{transform:rotate(-30deg)}to{transform:rotate(30deg)}}
+.ck-f,.ck-b{left:0}
+.ck-f{margin-left:60px}.ck-b{margin-left:8px}
+.logo .ck{margin-left:10px}
+@media (max-width:700px){.logo .ck{display:none}}
+@media (max-width:520px){.au-brand .ck{width:84px}}
+@media (max-width:400px){.au-brand .ck{display:none}}
+@media (prefers-reduced-motion:reduce){.ck-c,.ck-s,.ck-lg,.ck-ar{animation:none!important}}
+
+/* Hero: big burger-chases-fries scene */
+@keyframes ck-poke{0%,100%{transform:rotate(-96deg)}50%{transform:rotate(-80deg)}}
+.ck-ho{transform:rotate(-92deg);animation:ck-poke .4s ease-in-out infinite}
+.hb-stage{position:relative;height:clamp(120px,15vw,200px);margin:6px 0 8px;overflow:hidden}
+.hb-ground{position:absolute;left:0;right:0;bottom:12px;border-top:2px dashed rgba(255,255,255,.16)}
+.hb-stage .ck-c{bottom:16px;left:-30%;margin:0;animation:hb-run 7s linear infinite}
+.hb-stage .ck-b{animation-delay:.8s}
+.hb-stage .ck-s{height:clamp(96px,12vw,160px)}
+.hb-stage .ck-c::before{content:"";position:absolute;left:-44px;bottom:28%;width:36px;height:3px;border-radius:3px;background:rgba(255,255,255,.32);box-shadow:8px 15px 0 rgba(255,255,255,.22),2px 30px 0 rgba(255,255,255,.18);animation:hb-dash .3s linear infinite}
+.hb-stage .ck-c::after{content:"";position:absolute;left:8%;right:8%;bottom:-7px;height:9px;border-radius:50%;background:rgba(0,0,0,.3);filter:blur(2px);z-index:-1}
+.hb-em{position:absolute;top:-4px;right:-6px;font-style:normal;font-size:clamp(18px,2.4vw,32px);animation:hb-em .45s ease-in-out infinite alternate}
+@keyframes hb-run{from{left:-30%}to{left:104%}}
+@keyframes hb-dash{0%{opacity:.9;transform:translateX(0)}100%{opacity:0;transform:translateX(-10px)}}
+@keyframes hb-em{from{transform:translateY(0) rotate(-8deg)}to{transform:translateY(-5px) rotate(8deg)}}
+@media (prefers-reduced-motion:reduce){.hb-stage .ck-c{left:auto}.hb-stage .ck-f{left:64%}.hb-stage .ck-b{left:38%}.ck-ho,.hb-em,.hb-stage .ck-c::before{animation:none!important}.ck-ho{transform:rotate(-92deg)}}
+.hb-stage .ck-k{animation-delay:1.65s}.hb-stage .ck-p{animation-delay:2.5s}
+.hb-stage .ck-k .ck-s{height:clamp(84px,10.5vw,140px)}.hb-stage .ck-p .ck-s{height:clamp(80px,10vw,132px)}
+@media (prefers-reduced-motion:reduce){.hb-stage .ck-k{left:22%}.hb-stage .ck-p{left:10%}}
+.hb-stage .ck-s{filter:url(#ck3d) drop-shadow(5px 8px 5px rgba(0,0,0,.45))}
+.hb-stage .ck-c::after{height:12px;left:2%;right:2%;bottom:-9px;filter:blur(4px);background:rgba(0,0,0,.45)}
+.hb-stage .ck-c{animation:none!important;left:0!important;will-change:transform}
+.hb-stage .ck-s,.hb-stage .ck-ar,.hb-stage .ck-lg{animation:none!important}
+.hb-stage .ck-c::before{display:none}

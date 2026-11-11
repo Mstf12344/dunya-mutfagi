@@ -27,5 +27,9 @@ include __DIR__ . '/partials/legal_top.php';
 <h2>Cookies</h2>
 <p>The site uses no advertising or tracking cookies. Your session and settings are kept in your browser’s local storage.</p>
 </div>
+<?php if (ANALYTICS): ?>
+<h2>Visit statistics</h2>
+<p>We count page views with Vercel Web Analytics. It sets no cookies and does not identify you personally; it records anonymous information such as the page visited, country, device type and browser.</p>
+<?php endif; ?>
 <p style="margin-top:28px"><small>World Kitchen is a student project by Mustafa Çakmak. Source code: <a href="https://github.com/Mstf12344/Mustafa-Cakmak-254309252">GitHub</a>.</small></p>
 <?php include __DIR__ . '/partials/legal_bottom.php';

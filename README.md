@@ -12,6 +12,7 @@ Dünya mutfaklarından tarifleri, hikâyeleriyle birlikte sunan tarif sitesinin 
 - Yemek çarkı, arama önerileri, "Elimde ne var?"
 - Hesap sistemi (kullanıcı adı, e-posta veya Google ile giriş), favoriler, notlar, rozetler
 - 19 tema
+- Başlık yanında hamburger-patates kovalama animasyonu (`assets/js/hero.js`)
 - Açılan pencerelerde, tarif panelinde, pişirme modunda ve kartlarda animasyonlar (hareketi azalt ayarı açıksa kapanır)
 
 ## Çalıştırma
@@ -36,8 +37,11 @@ Sonra `http://localhost:8000` adresini açın. PHP 7.4 veya üstü yeterlidir, e
 | `partials/` | `<head>`, sayfa gövdesi ve yasal sayfa parçaları |
 | `gizlilik.php`, `kosullar.php` | Gizlilik ve koşullar sayfaları |
 | `assets/css/` | Stiller (`motion.css` animasyon katmanıdır) |
-| `assets/js/app.js`, `assets/js/motion.js` | Uygulama kodu ve animasyon yardımcıları |
+| `assets/js/app.js`, `assets/js/motion.js`, `assets/js/hero.js` | Uygulama kodu, animasyon yardımcıları ve başlık animasyonu |
 | `data/*.json` | Wikibooks tarifleri, bayraklar, gömülü fotoğraflar (yalnızca `data.php` üzerinden sunulur) |
+
+## Vercel Web Analytics (isteğe bağlı)
+Ziyaret istatistiği yalnızca Vercel'de çalışır. Varsayılan olarak kapalıdır; açmak için `VERCEL_ANALYTICS=true` ortam değişkenini tanımlayın. Açıkken gizlilik sayfasında "Visit statistics" bölümü de görünür.
 
 ## E-postayla ve Google ile giriş (Supabase)
 E-posta hesapları [Supabase Auth](https://supabase.com/docs/guides/auth) ile tutulur. `config.php` içindeki `SUPA_KEY` herkese açık "anon" anahtarıdır. Google ile girişin çalışması için Supabase'de izin verilen adreslere sitenin adresi (ör. `http://localhost`) eklenmelidir.

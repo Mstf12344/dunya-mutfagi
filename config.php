@@ -10,6 +10,8 @@ define('SITE_URL', rtrim((string)(getenv('SITE_URL') ?: 'https://dunya-mutfagi.v
 define('SUPA_URL', (string)(getenv('SUPA_URL') ?: "https://zaaqcndfftcoavqponua.supabase.co"));
 define('SUPA_KEY', (string)(getenv('SUPA_KEY') ?: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InphYXFjbmRmZnRjb2F2cXBvbnVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4Mjg3OTUsImV4cCI6MjEwODQwNDc5NX0.1hNMHm_L3v7gEAYsNCVoDBwbBamrdBaq6QxA21FJFzQ"));
 define('SUPA_GOOGLE', filter_var(getenv('SUPA_GOOGLE') !== false ? getenv('SUPA_GOOGLE') : 'true', FILTER_VALIDATE_BOOLEAN));
+// Vercel Web Analytics (only exists on Vercel; keep false for XAMPP / local use)
+define('ANALYTICS', filter_var(getenv('VERCEL_ANALYTICS') !== false ? getenv('VERCEL_ANALYTICS') : 'false', FILTER_VALIDATE_BOOLEAN));
 
 /** HTML-escape helper. */
 function e(string $s): string
