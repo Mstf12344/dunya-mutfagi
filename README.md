@@ -81,7 +81,7 @@ Google ile girişin çalışması için Supabase'de izin verilen adreslere siten
 Projenin amacını ve özelliklerini anlatan kısa video: [docs/tanitim-videosu.mp4](docs/tanitim-videosu.mp4) (GitHub'da dosyaya tıklayınca oynatılır).
 
 ## Yedek
-Projenin güncel ZIP yedeği (Google Drive): [dunya-mutfagi-guncel.zip](https://drive.google.com/file/d/184DmVssChA4o_lfVFsff1sBy9Tw7cROX/view?usp=sharing)
+Projenin güncel ZIP yedeği (Google Drive): [dunya-mutfagi-guncel.zip](https://drive.google.com/file/d/1TCjSFuhMDLCvtFWsrK4nA0Xfi49wUhvZ/view?usp=sharing)
 
 ## Diğer sürüm
 Sitenin tek dosyalık HTML sürümü ve dönem projesi raporları: [Mustafa-Cakmak-254309252](https://github.com/Mstf12344/Mustafa-Cakmak-254309252). Yayındaki HTML sürümü: https://dunya-mutfagi.vercel.app
