@@ -77,6 +77,9 @@ docs/                Ekran görüntüleri, tanıtım videosu metni, teslim kontr
 
 Google ile girişin çalışması için Supabase'de izin verilen adreslere sitenin adresi (ör. `http://localhost`) eklenmelidir.
 
+## Tanıtım videosu
+Projenin amacını ve özelliklerini anlatan kısa video: [docs/tanitim-videosu.mp4](docs/tanitim-videosu.mp4) (GitHub'da dosyaya tıklayınca oynatılır).
+
 ## Yedek
 Projenin güncel ZIP yedeği (Google Drive): [dunya-mutfagi-guncel.zip](https://drive.google.com/file/d/1-sU7vmtY1WF3ASLkLKEcLPyxWq1QHp1U/view?usp=sharing)
 
