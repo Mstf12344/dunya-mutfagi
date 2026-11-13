@@ -1,0 +1,11 @@
+# işletim sistemi ve editör dosyaları
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# yerel yedekler ve günlükler
+*.log
+*.bak
+*.zip
