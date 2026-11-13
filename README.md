@@ -77,6 +77,9 @@ docs/                Ekran görüntüleri, tanıtım videosu metni, teslim kontr
 
 Google ile girişin çalışması için Supabase'de izin verilen adreslere sitenin adresi (ör. `http://localhost`) eklenmelidir.
 
+## Yedek
+Projenin güncel ZIP yedeği (Google Drive): [dunya-mutfagi-guncel.zip](https://drive.google.com/file/d/1ZAGyyF-90SXnr9hV_z67GEemWcBFBkiO/view?usp=sharing)
+
 ## Diğer sürüm
 Sitenin tek dosyalık HTML sürümü ve dönem projesi raporları: [Mustafa-Cakmak-254309252](https://github.com/Mstf12344/Mustafa-Cakmak-254309252). Yayındaki HTML sürümü: https://dunya-mutfagi.vercel.app
 

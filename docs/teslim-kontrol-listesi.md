@@ -2,8 +2,8 @@
 
 Teslim için istenen üç bağlantı:
 
-- [ ] **GitHub bağlantısı:** `https://github.com/Mstf12344/dunya-mutfagi` (güncel kaynak kod)
-- [ ] **Google Drive bağlantısı:** Proje dosyalarının güncel yedeği (klasör ya da ZIP)
+- [x] **GitHub bağlantısı:** `https://github.com/Mstf12344/dunya-mutfagi` (güncel kaynak kod)
+- [x] **Google Drive bağlantısı:** https://drive.google.com/file/d/1ZAGyyF-90SXnr9hV_z67GEemWcBFBkiO/view?usp=sharing (güncel ZIP yedek)
 - [ ] **Tanıtım videosu bağlantısı:** Projenin amacını anlatan ve temel özellikleri çalışırken gösteren kısa video. Video Drive'daysa ayrı bağlantı gerekmez, yalnızca Drive bağlantısı yeterlidir. Konuşma metni için: [tanitim-videosu-metni.md](tanitim-videosu-metni.md)
 
 ## Göndermeden önce erişimi kontrol et
