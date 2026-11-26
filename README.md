@@ -51,10 +51,34 @@ Sonra `http://localhost:8000` adresini açın. Ek eklenti gerekmez (`zlib` varsa
 
 > Yazı tipleri ve tarif fotoğrafları internetten yüklendiği için sunum yapılan bilgisayarın internete bağlı olması gerekir.
 
+## Veritabanı kurulumu (1. hafta)
+Tarif kayıtları MySQL/MariaDB'de tutulur. Tablolar `kurulum.sql` dosyasındadır: `kullanicilar` (kullanıcı adı, parola özeti) ve `tarifler` (kayıt tablosu; her kaydın sahibi `kullanici_id` ile belirtilir).
+
+1. XAMPP Control Panel'den **Apache** ve **MySQL**'i başlatın.
+2. Tarayıcıda `http://localhost/phpmyadmin` adresini açın.
+3. Üstte **SQL** sekmesine gelin, `kurulum.sql` dosyasının içeriğini yapıştırıp **Git**'e basın (ya da **İçe Aktar** ile dosyayı seçin). `dunya_mutfagi` veritabanı, iki tablo, iki test hesabı ve üç örnek tarif oluşur.
+4. `tarifler` tablosuna tıklayın: üç kayıt görünmelidir. `SELECT * FROM tarifler WHERE id = 2;` Baklava kaydını getirmelidir.
+5. Bağlantıyı denemek için `http://localhost/dunya-mutfagi/baglanti-test.php?id=2` adresini açın.
+
+**Bağlantı ayarları** (`config.php`, XAMPP varsayılanları): sunucu `127.0.0.1`, veritabanı `dunya_mutfagi`, kullanıcı `root`, parola boş. Farklıysa `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` ortam değişkenleriyle değiştirilir. Bağlantı `db.php` içindeki tek `db()` işleviyle (PDO, hazır ifadeler, hata istisnaları) kurulur.
+
+**Test hesapları** (yalnızca bu projede kullanılır, gerçek bir hesap değildir):
+
+| Kullanıcı adı | Parola |
+|---|---|
+| `test1` | `Test1234!` |
+| `test2` | `Test5678!` |
+
+Veritabanında parolalar açık yazılmaz, `password_hash()` ile üretilmiş özetleri bulunur. Test adımları ve sonuçları için [TESTLER.md](TESTLER.md) dosyasına bakın.
+
 ## Proje yapısı
 ```
 index.php            Sayfa iskeleti: parçaları, ayarları ve betikleri birleştirir
-config.php           Ayarlar (SITE_URL, Supabase, analytics) ve yardımcı işlevler
+config.php           Ayarlar (SITE_URL, Supabase, analytics, veritabanı) ve yardımcı işlevler
+db.php               PDO bağlantısı (db() işlevi)
+baglanti-test.php    Veritabanı bağlantısını ve kayıtları denemek için sayfa
+kurulum.sql          Veritabanı, tablolar, test hesapları ve örnek kayıtlar
+TESTLER.md           Test adımları ve sonuçları
 data.php             Büyük veri kümelerini (?set=wb|flags|embed) önbellekli JS olarak sunar
 gizlilik.php         Gizlilik sayfası
 kosullar.php         Koşullar sayfası
