@@ -159,7 +159,7 @@ function csrf_dogrula(): void
 function oturum_menusu(): string
 {
     if (oturum_kullanici_id() === null) {
-        return '<nav class="tf-nav"><a href="../">Siteye dön</a><a href="giris.php">Giriş</a></nav>';
+        return '<nav class="tf-nav"><a href="../">Siteye dön</a><a href="giris.php">Giriş</a><a href="kayit.php">Kayıt ol</a></nav>';
     }
     return '<nav class="tf-nav"><a href="../">Siteye dön</a><a href="liste.php">Tarifler</a><a href="ekle.php">Yeni tarif</a>'
         . '<span class="kul">' . h((string)($_SESSION['kullanici_adi'] ?? '')) . '</span>'

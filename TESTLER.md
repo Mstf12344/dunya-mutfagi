@@ -84,3 +84,9 @@ Hafta 5'in kodu ana siteye eklendi (`/tariflerim/`, veritabanı `dunya_mutfagi`)
 | S.7 | Kendi eklediği kayıt silinir. | Kayıt listeden kalkar. | Geçti (26.11.2026) |
 | S.8 | `test2` ile giriş yapılır; test1'in kaydı (`id=1`) açılır. | Yalnızca test2'nin 2 kaydı görünür; `id=1` için 403. | Geçti (26.11.2026) |
 | S.9 | Çıkış yapılıp liste açılır. | Giriş ekranına yönlendirilir. | Geçti (26.11.2026) |
+| S.10 | `kayit.php` açılır; 1 karakterlik kullanıcı adı, 3 karakterlik parola ve birbirinden farklı iki parola ayrı ayrı denenir. | 422 ve ilgili hata mesajı, hesap oluşmaz. | Geçti (26.11.2026) |
+| S.11 | Var olan bir kullanıcı adıyla (`test1`) kayıt denenir. | "Bu kullanıcı adı alınmış" mesajı, hesap oluşmaz. | Geçti (26.11.2026): 422 |
+| S.12 | Kullanıcı adına `<b>x</b>` yazılır. | Geçersiz ad olarak reddedilir, etiket çalışmaz. | Geçti (26.11.2026) |
+| S.13 | Geçerli bilgilerle yeni hesap açılır. | Hesap oluşur, otomatik giriş yapılır, liste boştur ("Henüz tarifiniz yok."). | Geçti (26.11.2026) |
+| S.14 | Yeni hesapla test1'in kaydının (`id=1`) düzenleme adresi açılır. | 403. | Geçti (26.11.2026) |
+| S.15 | Çıkış yapılıp yeni hesapla yeniden giriş yapılır. | Giriş başarılı. | Geçti (26.11.2026) |

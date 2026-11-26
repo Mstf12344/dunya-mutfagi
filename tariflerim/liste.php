@@ -14,7 +14,7 @@ const SIRALAMA = [
     'baslik_artan' => ['Başlık (A → Z)', 'baslik ASC'],
 ];
 
-$bilgiler = ['eklendi' => 'Tarif eklendi.', 'guncellendi' => 'Tarif güncellendi.', 'silindi' => 'Tarif silindi.'];
+$bilgiler = ['eklendi' => 'Tarif eklendi.', 'guncellendi' => 'Tarif güncellendi.', 'silindi' => 'Tarif silindi.', 'kayit' => 'Hesabınız oluşturuldu, hoş geldiniz.'];
 $ok = (string)($_GET['ok'] ?? '');
 
 // --- Form değerleri (sayfada seçili kalmaları için) ---

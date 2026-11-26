@@ -64,7 +64,7 @@ Vize sonrası görevin beş haftası, her biri ayrı çalışan ve ayrı göster
 | Son | [tariflerim](tariflerim/) | Hafta 5'in kodu ana siteye **"Tariflerim"** bölümü olarak eklendi (**son sürüm**) | `dunya_mutfagi` |
 
 ### Son sürüm: sitede "Tariflerim" bölümü
-Ana sitenin üst çubuğundaki 📒 düğmesi (ya da `tariflerim/liste.php` adresi) **Tariflerim** bölümünü açar. Bölüm sitenin teması ve yazı tipiyle çalışır; kullanıcı kendi tariflerini MySQL'e ekler, düzenler, siler, arar ve filtreler. Her kullanıcı yalnızca kendi tariflerini görür. Tarif kataloğu, çark ve Şef gibi mevcut özellikler değişmedi. Tariflerim, sitedeki Supabase girişinden ayrı, kendi PHP oturumlu hesabıyla çalışır (hesaplar `kullanicilar` tablosundadır).
+Ana sitenin üst çubuğundaki 📒 düğmesi (ya da `tariflerim/liste.php` adresi) **Tariflerim** bölümünü açar. Bölüm sitenin teması ve yazı tipiyle çalışır; kullanıcı kendi tariflerini MySQL'e ekler, düzenler, siler, arar ve filtreler. Her kullanıcı yalnızca kendi tariflerini görür. Tarif kataloğu, çark ve Şef gibi mevcut özellikler değişmedi. Tariflerim, sitedeki Supabase girişinden ayrı, kendi PHP oturumlu hesabıyla çalışır (hesaplar `kullanicilar` tablosundadır). Yeni hesap `tariflerim/kayit.php` sayfasından açılır (kullanıcı adı 3–30 karakter, parola en az 8 karakter; parola `password_hash()` ile saklanır).
 
 **Kurulum (XAMPP)**
 1. Repoyu `C:\xampp\htdocs\dunya-mutfagi` klasörüne koyun.

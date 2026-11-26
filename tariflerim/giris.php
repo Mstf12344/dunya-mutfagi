@@ -42,5 +42,6 @@ if ($hata !== '') {
 echo '<form method="post" class="form" style="max-width:380px">' . csrf_alan()
    . '<label>Kullanıcı adı<input name="kullanici_adi" autocomplete="username" value="' . h($ad) . '"></label>'
    . '<label>Parola<input type="password" name="parola" autocomplete="current-password"></label>'
-   . '<button type="submit">Giriş yap</button></form>';
+   . '<button type="submit">Giriş yap</button></form>'
+   . '<p>Hesabınız yok mu? <a href="kayit.php">Kayıt olun</a></p>';
 sayfa_alt();
