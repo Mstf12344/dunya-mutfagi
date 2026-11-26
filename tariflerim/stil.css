@@ -1,0 +1,32 @@
+/* Tariflerim: sitenin tema değişkenlerini (main.css) kullanır */
+.tf{padding-bottom:60px}
+.tf h1{font-family:var(--display);margin:24px 0 12px;letter-spacing:-.02em}
+.tf a{color:var(--accent)}
+.tf-rozet{background:var(--accent);color:var(--on-accent);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700}
+.tf-nav{margin-left:auto;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.tf-nav a{text-decoration:none;font-weight:600}
+.kul{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 12px;font-size:14px}
+.tf table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.tf th,.tf td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tf th{background:var(--surface-2)}
+.dugme,.tf button{background:var(--accent);color:var(--on-accent);border:0;border-radius:999px;padding:8px 16px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.tf a.dugme{color:var(--on-accent)}
+.tf button.tehlike{background:#c62828;color:#fff}
+.tf-nav button{background:none;color:var(--accent);padding:0;border-radius:0}
+.mesaj{padding:10px 14px;border-radius:10px;margin:12px 0;background:var(--surface-2);border:1px solid var(--line)}
+.mesaj.ok{border-color:#2e7d32}.mesaj.hata{border-color:#c62828}
+.form label{display:block;margin:12px 0;font-weight:600}
+.form em{font-weight:400;color:var(--muted)}
+.form input,.form textarea,.form select,.filtre input,.filtre select{display:block;width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;margin-top:4px}
+.form .satir{display:flex;gap:14px;flex-wrap:wrap;align-items:end}
+.form .satir label{flex:1;min-width:160px}
+.form label.onay{flex:0 0 auto;font-weight:400}
+.form label.onay input{display:inline;width:auto}
+.alan-hata{display:block;color:#ff8a80;font-weight:400}
+.sayi{color:var(--muted);margin-left:8px}
+.filtre{display:flex;gap:10px;flex-wrap:wrap;align-items:end;background:var(--surface);border:1px solid var(--line);padding:12px;border-radius:12px;margin:12px 0}
+.filtre label{font-weight:600;font-size:14px}
+.filtre input,.filtre select{width:auto}
+form.satirici{display:inline}
+.bag{color:var(--accent)}
+.tf table{display:block;overflow-x:auto}

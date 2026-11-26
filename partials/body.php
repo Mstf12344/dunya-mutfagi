@@ -43,6 +43,7 @@
     <button class="icon-btn" id="langBtn" title="Language" aria-label="Language"><span id="langLbl" style="font-weight:800;font-size:13px">EN</span></button>
     <button class="icon-btn" id="sizeBtn" title="Text and image size" aria-label="Change page size"><span style="font-weight:800;font-size:15px">Aa</span></button>
     <button class="icon-btn" id="wheelBtn" title="Food wheel" aria-label="Open the food wheel"><span style="font-size:18px" aria-hidden="true">🎡</span></button>
+    <a class="icon-btn" id="myRecipesBtn" href="tariflerim/liste.php" title="Tariflerim (MySQL)" aria-label="Tariflerim: kendi tariflerini ekle, düzenle, sil" style="text-decoration:none"><span style="font-size:18px" aria-hidden="true">📒</span></a>
     <button class="icon-btn" id="themeBtn" title="Choose theme" aria-label="Choose theme" aria-haspopup="dialog" aria-controls="skinPop">
       <span style="font-size:18px" aria-hidden="true">🎨</span>
     </button>

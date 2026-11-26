@@ -1,13 +1,13 @@
 -- ============================================================================
--- Dünya Mutfağı (World Kitchen) – veritabanı kurulumu (5. hafta)
+-- Dünya Mutfağı (World Kitchen) – veritabanı kurulumu
 -- Çalıştırma: phpMyAdmin > SQL sekmesi > bu dosyanın tamamını yapıştırıp Git
 --             ya da  İçe Aktar (Import) > kurulum.sql
 -- Dosya yeniden çalıştırılabilir: önce tabloları siler, sonra yeniden kurar.
 -- ============================================================================
 
-CREATE DATABASE IF NOT EXISTS dunya_mutfagi_hafta5
+CREATE DATABASE IF NOT EXISTS dunya_mutfagi
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE dunya_mutfagi_hafta5;
+USE dunya_mutfagi;
 
 DROP TABLE IF EXISTS tarifler;
 DROP TABLE IF EXISTS kullanicilar;

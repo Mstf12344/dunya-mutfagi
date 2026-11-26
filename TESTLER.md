@@ -69,3 +69,18 @@ Testler XAMPP üzerinde (Apache + MySQL), `kurulum.sql` temiz kurulduktan sonra 
 | 5.12 | Çıkış yapılıp `liste.php` açılır. | `giris.php`'ye yönlendirilir. | Geçti (26.11.2026): Giriş sayfasına yönlendi. |
 | 5.13 | `kurulum.sql` temiz veritabanına yeniden kurulup temel işlemler tekrarlanır. | Hata yok; giriş, ekleme, düzenleme, silme çalışır. | Geçti (26.11.2026): Hata yok; tüm işlemler çalıştı. |
 
+## Son sürüm – Sitede "Tariflerim" bölümü
+
+Hafta 5'in kodu ana siteye eklendi (`/tariflerim/`, veritabanı `dunya_mutfagi`). Aynı testler site üzerinde yeniden çalıştırıldı.
+
+| # | Adım | Beklenen | Sonuç |
+|---|---|---|---|
+| S.1 | Giriş yapmadan `tariflerim/liste.php` açılır. | `giris.php`'ye yönlendirilir. | Geçti (26.11.2026) |
+| S.2 | `test1` ile giriş yapılır. | Yalnızca test1'in 3 kaydı listelenir. | Geçti (26.11.2026): Baked Ziti, Baklava, Ayran |
+| S.3 | Yeni tarif eklenir. | Kayıt eklenir ve listede görünür. | Geçti (26.11.2026) |
+| S.4 | Eklenen tarif düzenlenir. | Yeni başlık listede görünür. | Geçti (26.11.2026) |
+| S.5 | Arama (`baklava`) ve mutfak filtresi (`Türkiye`) kullanılır. | Doğru kayıtlar gelir. | Geçti (26.11.2026) |
+| S.6 | test1, test2'nin kaydını (`id=4`) açmayı ve silmeyi dener. | 403, kayıt değişmez. | Geçti (26.11.2026): ikisi de 403 |
+| S.7 | Kendi eklediği kayıt silinir. | Kayıt listeden kalkar. | Geçti (26.11.2026) |
+| S.8 | `test2` ile giriş yapılır; test1'in kaydı (`id=1`) açılır. | Yalnızca test2'nin 2 kaydı görünür; `id=1` için 403. | Geçti (26.11.2026) |
+| S.9 | Çıkış yapılıp liste açılır. | Giriş ekranına yönlendirilir. | Geçti (26.11.2026) |

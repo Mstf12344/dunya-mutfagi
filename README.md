@@ -60,15 +60,19 @@ Vize sonrası görevin beş haftası, her biri ayrı çalışan ve ayrı göster
 | 2 | [hafta-2](hafta-2/) | PDO ile listeleme, kayıt ekleme, doğrulama | `dunya_mutfagi_hafta2` |
 | 3 | [hafta-3](hafta-3/) | Güncelleme ve silme (POST) | `dunya_mutfagi_hafta3` |
 | 4 | [hafta-4](hafta-4/) | Arama, filtre, sıralama | `dunya_mutfagi_hafta4` |
-| 5 | [hafta-5](hafta-5/) | Kullanıcı girişi, oturum, kayıt sahipliği (**son sürüm**) | `dunya_mutfagi_hafta5` |
+| 5 | [hafta-5](hafta-5/) | Kullanıcı girişi, oturum, kayıt sahipliği | `dunya_mutfagi_hafta5` |
+| Son | [tariflerim](tariflerim/) | Hafta 5'in kodu ana siteye **"Tariflerim"** bölümü olarak eklendi (**son sürüm**) | `dunya_mutfagi` |
 
-### Son sürümü kurma (XAMPP)
+### Son sürüm: sitede "Tariflerim" bölümü
+Ana sitenin üst çubuğundaki 📒 düğmesi (ya da `tariflerim/liste.php` adresi) **Tariflerim** bölümünü açar. Bölüm sitenin teması ve yazı tipiyle çalışır; kullanıcı kendi tariflerini MySQL'e ekler, düzenler, siler, arar ve filtreler. Her kullanıcı yalnızca kendi tariflerini görür. Tarif kataloğu, çark ve Şef gibi mevcut özellikler değişmedi. Tariflerim, sitedeki Supabase girişinden ayrı, kendi PHP oturumlu hesabıyla çalışır (hesaplar `kullanicilar` tablosundadır).
+
+**Kurulum (XAMPP)**
 1. Repoyu `C:\xampp\htdocs\dunya-mutfagi` klasörüne koyun.
 2. XAMPP Control Panel'den **Apache** ve **MySQL**'i başlatın.
-3. `http://localhost/phpmyadmin` > **SQL** sekmesine bu klasördeki `kurulum.sql` (= `hafta-5/kurulum.sql`) içeriğini yapıştırıp **Git**'e basın. `dunya_mutfagi_hafta5` veritabanı, `kullanicilar` ve `tarifler` tabloları, iki test hesabı ve beş örnek tarif oluşur.
-4. `http://localhost/dunya-mutfagi/hafta-5/giris.php` adresini açın.
+3. `http://localhost/phpmyadmin` > **SQL** sekmesine bu klasördeki `kurulum.sql` (= `tariflerim/kurulum.sql`) içeriğini yapıştırıp **Git**'e basın. `dunya_mutfagi` veritabanı, `kullanicilar` ve `tarifler` tabloları, iki test hesabı ve beş örnek tarif oluşur.
+4. `http://localhost/dunya-mutfagi/tariflerim/giris.php` adresini açın.
 
-**Bağlantı ayarları** (`hafta-5/config.php`): sunucu `127.0.0.1`, veritabanı `dunya_mutfagi_hafta5`, kullanıcı `root`, parola boş (XAMPP varsayılanı).
+**Bağlantı ayarları** (`tariflerim/config.php`): sunucu `127.0.0.1`, veritabanı `dunya_mutfagi`, kullanıcı `root`, parola boş (XAMPP varsayılanı). Bağlantı yalnızca `tariflerim/db.php` içindeki `db()` işleviyle (PDO) kurulur.
 
 **Test hesapları** (yalnızca bu projede kullanılır, gerçek bir hesap değildir):
 
@@ -85,7 +89,8 @@ Test adımları ve sonuçları: [TESTLER.md](TESTLER.md).
 ```
 index.php            Sayfa iskeleti: parçaları, ayarları ve betikleri birleştirir
 config.php           Ayarlar (SITE_URL, Supabase, analytics) ve yardımcı işlevler
-kurulum.sql          Son sürümün (hafta-5) veritabanı, tabloları, test hesapları ve örnek kayıtları
+kurulum.sql          Son sürümün (tariflerim) veritabanı, tabloları, test hesapları ve örnek kayıtları
+tariflerim/          Sitenin MySQL'li "Tariflerim" bölümü (son sürüm)
 hafta-1 … hafta-5    Haftalık sürümler (her biri ayrı çalışır; kendi kurulum.sql, README.md, TESTLER.md)
 TESTLER.md           Test adımları ve sonuçları
 data.php             Büyük veri kümelerini (?set=wb|flags|embed) önbellekli JS olarak sunar
