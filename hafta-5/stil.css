@@ -1,0 +1,31 @@
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,Segoe UI,Arial,sans-serif;background:#faf6f0;color:#2a2118}
+.kap{max-width:980px;margin:0 auto;padding:0 16px}
+header{background:#2a2118;color:#fff;padding:12px 0}
+header .kap{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header nav{margin-left:auto;display:flex;gap:14px;align-items:center}
+header a{color:#ffd9a8;text-decoration:none}
+.rozet{background:#c2410c;border-radius:999px;padding:2px 10px;font-size:13px}
+h1{margin:22px 0 12px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden}
+th,td{padding:8px 10px;border-bottom:1px solid #eee;text-align:left;vertical-align:top}
+th{background:#f1e6d6}
+.dugme,button{background:#c2410c;color:#fff;border:0;border-radius:6px;padding:8px 14px;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+button.tehlike{background:#b91c1c}
+.bag{color:#7c2d12}
+.mesaj{padding:10px 14px;border-radius:6px;margin:12px 0;background:#eef2ff}
+.mesaj.ok{background:#dcfce7}.mesaj.hata{background:#fee2e2}
+.form label{display:block;margin:12px 0;font-weight:600}
+.form em{font-weight:400;color:#6b5b4a}
+.form input,.form textarea,.form select{display:block;width:100%;padding:8px;border:1px solid #cdbfae;border-radius:6px;font:inherit;margin-top:4px}
+.form .satir{display:flex;gap:14px;flex-wrap:wrap;align-items:end}
+.form .satir label{flex:1;min-width:160px}
+.form label.onay{flex:0 0 auto;font-weight:400}
+.form label.onay input{display:inline;width:auto}
+.alan-hata{display:block;color:#b91c1c;font-weight:400}
+.sayi{color:#6b5b4a;margin-left:8px}
+.filtre{display:flex;gap:10px;flex-wrap:wrap;align-items:end;background:#fff;padding:12px;border-radius:8px;margin:12px 0}
+.filtre label{font-weight:600;font-size:14px}
+.filtre input,.filtre select{display:block;padding:7px;border:1px solid #cdbfae;border-radius:6px;font:inherit;margin-top:3px}
+form.satirici{display:inline}
+.kul{color:#fff;background:#4b5563;border-radius:999px;padding:2px 10px;font-size:14px}

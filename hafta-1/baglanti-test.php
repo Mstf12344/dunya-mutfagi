@@ -1,5 +1,5 @@
 <?php
-/** 1. hafta kontrolü: PDO bağlantısı çalışıyor mu, kayıtlar geliyor mu? Tarayıcıda: /baglanti-test.php?id=2 */
+/** 1. hafta kontrolü: PDO bağlantısı çalışıyor mu, kayıtlar geliyor mu? Tarayıcıda: baglanti-test.php?id=2 */
 declare(strict_types=1);
 require_once __DIR__ . '/db.php';
 header('Content-Type: text/plain; charset=utf-8');
@@ -8,8 +8,8 @@ try {
     $pdo = db();
     echo "Bağlantı tamam: " . DB_NAME . "\n\n";
     echo "Tüm kayıtlar:\n";
-    foreach ($pdo->query('SELECT id, kullanici_id, baslik FROM tarifler ORDER BY id') as $r) {
-        echo "  #{$r['id']} (sahip {$r['kullanici_id']}) {$r['baslik']}\n";
+    foreach ($pdo->query('SELECT id, baslik, mutfak FROM tarifler ORDER BY id') as $r) {
+        echo "  #{$r['id']} {$r['baslik']} ({$r['mutfak']})\n";
     }
     $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
     if ($id) {

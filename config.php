@@ -13,12 +13,6 @@ define('SUPA_GOOGLE', filter_var(getenv('SUPA_GOOGLE') !== false ? getenv('SUPA_
 // Vercel Web Analytics (only exists on Vercel; keep false for XAMPP / local use)
 define('ANALYTICS', filter_var(getenv('VERCEL_ANALYTICS') !== false ? getenv('VERCEL_ANALYTICS') : 'false', FILTER_VALIDATE_BOOLEAN));
 
-// MySQL / MariaDB (XAMPP varsayılanları). Gerçek parola yazmayın; gerekirse ortam değişkeniyle verin.
-define('DB_HOST', (string)(getenv('DB_HOST') ?: '127.0.0.1'));
-define('DB_NAME', (string)(getenv('DB_NAME') ?: 'dunya_mutfagi'));
-define('DB_USER', (string)(getenv('DB_USER') ?: 'root'));
-define('DB_PASS', (string)(getenv('DB_PASS') ?: ''));
-
 /** HTML-escape helper. */
 function e(string $s): string
 {

@@ -51,33 +51,42 @@ Sonra `http://localhost:8000` adresini açın. Ek eklenti gerekmez (`zlib` varsa
 
 > Yazı tipleri ve tarif fotoğrafları internetten yüklendiği için sunum yapılan bilgisayarın internete bağlı olması gerekir.
 
-## Veritabanı kurulumu (1. hafta)
-Tarif kayıtları MySQL/MariaDB'de tutulur. Tablolar `kurulum.sql` dosyasındadır: `kullanicilar` (kullanıcı adı, parola özeti) ve `tarifler` (kayıt tablosu; her kaydın sahibi `kullanici_id` ile belirtilir).
+## MySQL görevi: haftalık sürümler ve son sürüm
+Vize sonrası görevin beş haftası, her biri ayrı çalışan ve ayrı gösterilebilen klasör olarak durur. Her klasörün kendi `kurulum.sql`, `README.md` ve `TESTLER.md` dosyası vardır:
 
-1. XAMPP Control Panel'den **Apache** ve **MySQL**'i başlatın.
-2. Tarayıcıda `http://localhost/phpmyadmin` adresini açın.
-3. Üstte **SQL** sekmesine gelin, `kurulum.sql` dosyasının içeriğini yapıştırıp **Git**'e basın (ya da **İçe Aktar** ile dosyayı seçin). `dunya_mutfagi` veritabanı, iki tablo, iki test hesabı ve üç örnek tarif oluşur.
-4. `tarifler` tablosuna tıklayın: üç kayıt görünmelidir. `SELECT * FROM tarifler WHERE id = 2;` Baklava kaydını getirmelidir.
-5. Bağlantıyı denemek için `http://localhost/dunya-mutfagi/baglanti-test.php?id=2` adresini açın.
+| Hafta | Klasör | İçerik | Veritabanı |
+|---|---|---|---|
+| 1 | [hafta-1](hafta-1/) | Veritabanı, `tarifler` tablosu, `kurulum.sql`, PDO deneme sayfası | `dunya_mutfagi_hafta1` |
+| 2 | [hafta-2](hafta-2/) | PDO ile listeleme, kayıt ekleme, doğrulama | `dunya_mutfagi_hafta2` |
+| 3 | [hafta-3](hafta-3/) | Güncelleme ve silme (POST) | `dunya_mutfagi_hafta3` |
+| 4 | [hafta-4](hafta-4/) | Arama, filtre, sıralama | `dunya_mutfagi_hafta4` |
+| 5 | [hafta-5](hafta-5/) | Kullanıcı girişi, oturum, kayıt sahipliği (**son sürüm**) | `dunya_mutfagi_hafta5` |
 
-**Bağlantı ayarları** (`config.php`, XAMPP varsayılanları): sunucu `127.0.0.1`, veritabanı `dunya_mutfagi`, kullanıcı `root`, parola boş. Farklıysa `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` ortam değişkenleriyle değiştirilir. Bağlantı `db.php` içindeki tek `db()` işleviyle (PDO, hazır ifadeler, hata istisnaları) kurulur.
+### Son sürümü kurma (XAMPP)
+1. Repoyu `C:\xampp\htdocs\dunya-mutfagi` klasörüne koyun.
+2. XAMPP Control Panel'den **Apache** ve **MySQL**'i başlatın.
+3. `http://localhost/phpmyadmin` > **SQL** sekmesine bu klasördeki `kurulum.sql` (= `hafta-5/kurulum.sql`) içeriğini yapıştırıp **Git**'e basın. `dunya_mutfagi_hafta5` veritabanı, `kullanicilar` ve `tarifler` tabloları, iki test hesabı ve beş örnek tarif oluşur.
+4. `http://localhost/dunya-mutfagi/hafta-5/giris.php` adresini açın.
+
+**Bağlantı ayarları** (`hafta-5/config.php`): sunucu `127.0.0.1`, veritabanı `dunya_mutfagi_hafta5`, kullanıcı `root`, parola boş (XAMPP varsayılanı).
 
 **Test hesapları** (yalnızca bu projede kullanılır, gerçek bir hesap değildir):
 
-| Kullanıcı adı | Parola |
-|---|---|
-| `test1` | `Test1234!` |
-| `test2` | `Test5678!` |
+| Kullanıcı adı | Parola | Kayıtları |
+|---|---|---|
+| `test1` | `Test1234!` | Ayran, Baklava, Baked Ziti |
+| `test2` | `Test5678!` | Onigiri, Chunky Guacamole |
 
-Veritabanında parolalar açık yazılmaz, `password_hash()` ile üretilmiş özetleri bulunur. Test adımları ve sonuçları için [TESTLER.md](TESTLER.md) dosyasına bakın.
+Veritabanında parolalar açık yazılmaz; `password_hash()` ile üretilmiş özetler vardır.
+
+Test adımları ve sonuçları: [TESTLER.md](TESTLER.md).
 
 ## Proje yapısı
 ```
 index.php            Sayfa iskeleti: parçaları, ayarları ve betikleri birleştirir
-config.php           Ayarlar (SITE_URL, Supabase, analytics, veritabanı) ve yardımcı işlevler
-db.php               PDO bağlantısı (db() işlevi)
-baglanti-test.php    Veritabanı bağlantısını ve kayıtları denemek için sayfa
-kurulum.sql          Veritabanı, tablolar, test hesapları ve örnek kayıtlar
+config.php           Ayarlar (SITE_URL, Supabase, analytics) ve yardımcı işlevler
+kurulum.sql          Son sürümün (hafta-5) veritabanı, tabloları, test hesapları ve örnek kayıtları
+hafta-1 … hafta-5    Haftalık sürümler (her biri ayrı çalışır; kendi kurulum.sql, README.md, TESTLER.md)
 TESTLER.md           Test adımları ve sonuçları
 data.php             Büyük veri kümelerini (?set=wb|flags|embed) önbellekli JS olarak sunar
 gizlilik.php         Gizlilik sayfası
